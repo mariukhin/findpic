@@ -1,0 +1,64 @@
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+}
+.form{
+  width: 250px;
+  margin: 0 auto;
+}
+input{
+  margin: 50px 0;
+  border: 3px #414141 solid;
+}
+.mdc-btn {
+  min-width: 88px;
+  margin-top: 10px;
+  margin: 0 auto;
+  height: 36px;
+  padding: 0 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00796b;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(#414141, 0.3);
+}
+.container {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+img{
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 250px;
+}
+.post{
+  text-align: center;
+  flex-basis: 300px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  box-shadow: 10px 5px 5px rgb(63, 62, 62);
+  background-color: lemonchiffon;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.url{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+a, p{
+  margin: 10px;
+  color: black;
+}
