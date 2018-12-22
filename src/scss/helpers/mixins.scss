@@ -1,0 +1,11 @@
+//Если необходимы миксины кидаем сюда
+//-----Пример миксина-------//
+
+@mixin font_style($family: '', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
+    font-family: $family;
+    font-size: $fsize ;
+    font-weight: $fweight;
+    line-height: $lheight;
+    text-transform: $ftrans;
+    color: $fcolor;
+}

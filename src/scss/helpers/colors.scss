@@ -1,0 +1,13 @@
+//Тут все цвета. Добавляем в $colors и используем
+
+$colors: (
+  primary-black: #000000,
+  section-text: #444444
+);
+
+@function color($key) {
+  @if map-has-key($map: $colors, $key: $key) {
+    @return map-get($map: $colors, $key: $key);
+  }
+  @return null;
+}
