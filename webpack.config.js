@@ -46,6 +46,15 @@ module.exports = {
             test: /\.(png|svg|jpg|gif)$/,
             exclude: /node_modules/,
             use: ["file-loader"],
+        },
+        {
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+             use: {
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]'
+                }
+            }
         }]
     },
     plugins: [

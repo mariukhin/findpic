@@ -1,0 +1,17 @@
+@import '../helpers/colors.scss';
+@import '../helpers/fonts.scss';
+@import '../helpers/mixins.scss';
+
+
+.gallery-wrapper{
+    @extend %wrapper-sett;
+    @media screen and (min-width: 1200px) {
+        width: 55rem;
+  }
+}
+.gallery-title{
+    text-align: left;
+    vertical-align: top;
+    margin-bottom: 0.875rem;
+    @include font_style('Roboto', 1em, 400, 1em, none, title);
+}

@@ -1,14 +1,14 @@
 //тут будут все шрифты
-//-----Пример импорта------//
-
-// @font-face {
-//     font-family: "CormorantUnicase";
-//     font-weight: 700;
-//     src: url("../fonts/CormorantUnicase/CormorantUnicase-Bold.ttf");
-// }
-// @font-face {
-//     font-family: "Roboto";
-//     font-weight: 900;
-//     font-style: italic;
-//     src: url("../fonts/Roboto/Roboto-BlackItalic.ttf");
-// }
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Roboto/Roboto.ttf");
+}
+/* comfortaa-700 - latin */
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Comfortaa/Comfortaa.ttf");   
+}
