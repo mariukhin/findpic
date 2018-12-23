@@ -1,11 +1,39 @@
 //Если необходимы миксины кидаем сюда
 //-----Пример миксина-------//
 
-@mixin font_style($family: '', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
+@import 'colors.scss';
+@import 'fonts.scss';
+
+@mixin font_style($family: 'Roboto', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
     font-family: $family;
     font-size: $fsize ;
     font-weight: $fweight;
     line-height: $lheight;
     text-transform: $ftrans;
-    color: $fcolor;
+    color: map-get($map: $colors, $key: $fcolor);
+}
+@mixin flex($value: 'all'){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @if $value == 'all'{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'hor'{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    }@else if $value == 'ver'{
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'align'{
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }           
 }
