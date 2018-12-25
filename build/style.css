@@ -1,0 +1,63 @@
+.gallery-wrapper {
+  margin: 0 auto;
+  width: 41.9375rem;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Roboto.ttf); }
+
+/* comfortaa-700 - latin */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/Comfortaa.ttf); }
+
+@media screen and (min-width: 1200px) {
+  .gallery-wrapper {
+    width: 55rem; } }
+
+.gallery-title {
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 0.875rem;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: none;
+  color: #7147bc; }
+
+.gallery-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between; }
+  .gallery-container_item {
+    width: 13.125rem;
+    height: 7.625rem; }
+    .gallery-container_item:hover .item-hover {
+      opacity: 0; }
+  @media screen and (max-width: 714px) {
+    .gallery-container {
+      width: 70%; } }
+
+.item-hover {
+  position: absolute;
+  opacity: 1;
+  width: 13.125rem;
+  height: 7.625rem;
+  background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5)); }
+
+.item-closebutton {
+  position: relative;
+  left: 12rem;
+  top: 0.2rem;
+  z-index: -1;
+  cursor: pointer; }
+
