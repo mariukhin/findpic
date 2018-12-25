@@ -1,8 +1,16 @@
+.gallery{
+    @media screen and (max-width: 1200px) {
+        height: 40rem;
+    }
+    @media screen and (max-width: 717px) {
+        height: 58rem;
+    }
+}
 .gallery-wrapper{
     @extend %wrapper-sett;
     @media screen and (min-width: 1200px) {
         width: 55rem;
-  }
+    }
 }
 .gallery-title{
     text-align: left;
@@ -12,7 +20,7 @@
 }
 .gallery-container{
     width: 100%;
-    height: 400px;
+    height: 25rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -24,8 +32,12 @@
             opacity: 0;
         }
     }
+    @media screen and (max-width: 1200px) {
+        height: 35rem;
+    }
     @media screen and (max-width: 714px) {
         width: 70%;
+        height: 55rem;
     }
 }
 .item-hover{
