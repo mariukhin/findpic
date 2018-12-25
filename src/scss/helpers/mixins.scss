@@ -1,9 +1,6 @@
 //Если необходимы миксины кидаем сюда
 //-----Пример миксина-------//
 
-@import 'colors.scss';
-@import 'fonts.scss';
-
 @mixin font_style($family: 'Roboto', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
     font-family: $family;
     font-size: $fsize ;
