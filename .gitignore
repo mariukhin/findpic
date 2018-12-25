@@ -1,1 +1,8 @@
 node_modules/
+.idea/encodings.xml
+.idea/findpic.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/watcherTasks.xml
