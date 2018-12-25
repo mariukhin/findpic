@@ -1,0 +1,83 @@
+@import '../helpers/colors.scss';
+@import '../helpers/fonts.scss';
+@import '../helpers/mixins.scss';
+
+/* The Modal (background) */
+.modal {
+  //display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  margin-top: 214px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  padding-top: 58px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* The Preview Image */
+.preview-image {
+  display: flex;
+  position: center;
+  width: 704px;
+  height: 408px;
+}
+
+/* Modal control */
+.modal-control {
+  margin: 15px auto 0;
+  width: 114px;
+  height: 34px;
+  background-color: #673ab7;
+  border-radius: 15px;
+  line-height: 34px;
+}
+
+/* Modal buttons */
+.control-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Control previous-next Buttons */
+.control-previous-next {
+  display: flex;
+}
+
+/* The Previous Button */
+.previous:hover,
+.previous:focus {
+  cursor: pointer;
+}
+
+/* The next Button */
+.next {
+  margin-left: 10px;
+}
+
+.next:hover,
+.next:focus {
+  cursor: pointer;
+}
+
+/* The favorite Button */
+.favorite:hover,
+.favorite:focus {
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
