@@ -55,6 +55,11 @@
 }
 
 /* The Previous Button */
+.previous {
+  height: 10px;
+  width: 6px;
+}
+
 .previous:hover,
 .previous:focus {
   cursor: pointer;
@@ -62,6 +67,8 @@
 
 /* The next Button */
 .next {
+  height: 10px;
+  width: 6px;
   margin-left: 10px;
 }
 
@@ -71,12 +78,22 @@
 }
 
 /* The favorite Button */
+.favorite {
+  height: 11px;
+  width: 11px;
+}
+
 .favorite:hover,
 .favorite:focus {
   cursor: pointer;
 }
 
 /* The Close Button */
+.close {
+  height: 10px;
+  width: 10px;
+}
+
 .close:hover,
 .close:focus {
   cursor: pointer;
