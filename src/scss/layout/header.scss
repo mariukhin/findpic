@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  
+  @media (min-width: 480px) {
+    
+    
+    .header__main {
+      max-width: 95%;
+      margin: auto;
+      padding-bottom: 1rem;
+      padding-right: 0.375rem;
+      padding-left: 0.375rem;
+          
+    }
+    
+    .header__navigation {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 2.065rem;
+      align-items: center;
+  
+    
+    }
+  
+    
+    .navigation {
+      &__text {
+        @include font_style('Roboto', 0.5rem, 400, 0.8rem, none, title);
+        text-decoration: none;
+      }
+    
+      &__img {
+          margin-right: 0.2rem;
+      }
+    }
+    
+    .header__find {
+      max-width: 100%;
+      margin: auto;
+    }
+  
+    .find__logo {
+      max-width: 55.31%;
+      margin: 0rem auto 1.625rem;
+  
+    }
+  
+    .form__div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+      
+  
+    .form__input {
+        width: 81.2%;
+        border: 1px, solid, #adafb2;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        height: 1.625rem;
+        outline: none;
+    }
+    
+    .form__input::placeholder {
+      font-family: 'Roboto', sans-serif;
+      color: #adafb2;
+      font-size: 0.625rem;
+      padding-left: 1.0625rem;
+    }
+  
+    .form__div {
+         display: flex;
+        justify-content: space-between;
+    }
+    
+    .form__button {
+        width: 16%;
+        height: 1.625rem;
+        color: #ffffff;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 0.425rem;
+        font-weight: 700;
+        line-height: 0.875rem;
+        background-color: #cddc39;
+        border: none;
+        border-radius: 0.5rem;     -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+         outline: none;
+    }
+       
+      
+    
+  
+    @media (min-width: 768px) {
+  
+  .header{
+  
+   &__find {
+     max-width: 65%;
+     margin: 0rem 8rem;
+    }
+  
+    &__main {
+        padding-bottom: 1.25rem;
+        padding-right: 1.5rem;
+    }
+  }
+  
+  .logo__a--img {
+    width: 80%;
+  }
+  
+  .navigation__text {
+    font-size: 0.8rem;
+  }
+  
+  .form__div {
+    width: 25rem;
+    margin: auto;
+  }
+  .form__input {
+      height: 1.25rem;
+  }
+  
+  .form__button {
+       height: 1.5rem;
+  
+  }
+  
+      
+  }
+  
+    @media (min-width: 1200px) {
+  .navigation__text {
+     font-family: 'Roboto', sans-serif;
+     font-size: 1rem;
+  }
+  
+  .navigation__img {
+    margin-right: 0.2rem; 
+  }
+  
+  .logo__a--img {
+    max-width: 51%;
+  }
+  
+  .find__logo {
+    margin-bottom: 3rem;
+  
+  }
+  
+  .form__input::placeholder {
+      font-size: 0.625rem;
+      line-height: 1.4rem;
+  
+  }
+  
+  .form__div {
+    width: 35rem;
+    margin: auto;
+  
+  }
+  
+  .form__input {
+    height: 1.5rem;
+  }
+  
+  .form__button {
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+      
+  }
+  
+  .header {
+  
+      &__main {
+          padding: 1rem 1.75rem;
+        
+      }
+  
+      &__navigation {
+        margin-bottom: 7.187rem;
+    
+      }
+  
+      &__find { 
+        margin: 0rem auto 1.875rem;
+        max-width: 100%;
+       
+      }
+    }
+  }
+  }
