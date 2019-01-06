@@ -1,8 +1,8 @@
 //Если необходимы миксины кидаем сюда
 //-----Пример миксина-------//
 
-@mixin font_style($family: 'Roboto', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
-    font-family: $family;
+
+@mixin font_style($fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
     font-size: $fsize ;
     font-weight: $fweight;
     line-height: $lheight;

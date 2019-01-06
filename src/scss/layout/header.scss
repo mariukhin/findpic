@@ -35,7 +35,7 @@
     
     .navigation {
       &__text {
-        @include font_style('Roboto', 0.5rem, 400, 0.8rem, none, title);
+        @include font_style(0.5rem, 400, 0.8rem, none, title);
         text-decoration: none;
       }
     
