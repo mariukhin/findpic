@@ -159,6 +159,26 @@ img {
 
 .gallery {
   padding-bottom: 1.25rem; }
+  .gallery-loadmore-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 9.1875rem;
+    height: 1.625rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    text-transform: none;
+    color: #ffffff;
+    background-color: #cddc39;
+    border: none;
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+    outline: none; }
   @media screen and (max-width: 1200px) {
     .gallery {
       height: 40rem; } }
@@ -179,6 +199,7 @@ img {
     width: 35rem; } }
 
 .gallery-title {
+  display: none;
   text-align: left;
   vertical-align: top;
   margin-bottom: 0.875rem;
@@ -237,6 +258,11 @@ img {
     top: 0.3rem;
     opacity: 0;
     cursor: pointer; }
+
+.item-pic {
+  display: block;
+  width: 13.0625rem;
+  height: 7.625rem; }
 
 @font-face {
   font-family: 'Roboto';
