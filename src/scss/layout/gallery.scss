@@ -58,9 +58,9 @@ $line-grad: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
         width: 12.125rem;
         height: 7.625rem;
         &:hover .item-wrapper{
-            background: url('../img/gallery/gallerypic1.jpg');
+            opacity: 0;
         }
-        &:hover .item-wrapper::after{
+        &:hover .item-closebutton{
             opacity: 1;
         }
         @media screen and (min-width: 1200px){
@@ -94,23 +94,30 @@ $line-grad: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
 .item{
     &-wrapper{
         position: absolute;
-        width: 13.125rem;
+        opacity: 1;
+        width: 12.125rem;
         height: 7.625rem;
-        background: $line-grad, url('../img/gallery/gallerypic1.jpg');
-        &::after{
-            content: url('../img/gallery/deletebtn.png');
-            width: 0.625rem;
-            height: 0.625rem;
-            position: relative;
-            left: 12rem;
-            top: 0.3rem;
-            opacity: 0;
-            cursor: pointer;
-        }
+        background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
+    }
+    &-closebutton{
+        position: relative;
+        left: 11.1rem;
+        top: 0.35rem;
+        opacity: 0;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        background-image: url('../img/gallery/deletebtn.png');
+        width: 0.625rem;
+        height: 0.625rem;
     }
     &-pic{
+        position: relative;
         display: block;
-        width: 13.0625rem;
+        z-index: -1;
+        bottom: 1.1rem;
+        left: 0rem;
+        width: 12.125rem;
         height: 7.625rem;
     }
 }
