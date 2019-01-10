@@ -4,7 +4,10 @@
 
 /* The Modal (background) */
 .modal {
-  margin-top: 20px; /* Location of the box */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  margin-top: 120px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -26,8 +29,8 @@
 .preview-image {
   display: flex;
   position: center;
-  width: 704px;
-  height: 408px;
+  //width: 704px;
+  //height: 408px;
 }
 
 /* Modal control */
