@@ -10,6 +10,12 @@
     height: auto;
     margin: auto;
   }
+
+  .header__main {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
   
   @media (min-width: 480px) {
     
@@ -64,20 +70,22 @@
   
     .form__input {
         width: 81.2%;
-        border: 1px, solid, #adafb2;
-        border-radius: 0.5rem;
-        -webkit-border-radius: 0.5rem;        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        -o-border-radius: 0.5rem;
-        height: 1.625rem;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.7rem;
+        -webkit-border-radius: 0.7rem;        
+        -moz-border-radius: 0.7rem;
+        -ms-border-radius: 0.7rem;
+        -o-border-radius: 0.7rem;
         outline: none;
+        padding-left: 1.0625rem;
+        line-height: 1.25rem;
     }
     
     .form__input::placeholder {
       font-family: 'Roboto', sans-serif;
       color: #adafb2;
       font-size: 0.625rem;
-      padding-left: 1.0625rem;
+     
     }
   
     .form__div {
@@ -86,19 +94,21 @@
     }
     
     .form__button {
-        width: 16%;
+      
+        width: 14.5%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
         height: 1.625rem;
-        color: #ffffff;
-        font-family: 'Comfortaa', sans-serif;
-        font-size: 0.425rem;
-        font-weight: 700;
-        line-height: 0.875rem;
+        font-family: 'Comfortaa', sans-serif;        
+        @include font_style(0.875rem, 400, 1rem, none, button-text);
         background-color: #cddc39;
         border: none;
-        border-radius: 0.5rem;     -webkit-border-radius: 0.5rem;
-        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        -o-border-radius: 0.5rem;
+        border-radius: 0.7rem;     
+        -webkit-border-radius: 0.7rem;
+        -moz-border-radius: 0.7rem;
+        -ms-border-radius: 0.7rem;
+        -o-border-radius: 0.7rem;
          outline: none;
     }
        
@@ -133,7 +143,7 @@
     margin: auto;
   }
   .form__input {
-      height: 1.25rem;
+      height: 1.5rem;
   }
   
   .form__button {
@@ -155,7 +165,7 @@
   }
   
   .logo__a--img {
-    max-width: 51%;
+    max-width: 18.75rem;
   }
   
   .find__logo {
@@ -165,7 +175,7 @@
   
   .form__input::placeholder {
       font-size: 0.625rem;
-      line-height: 1.4rem;
+      line-height: 1.5rem;
   
   }
   
@@ -176,13 +186,13 @@
   }
   
   .form__input {
-    height: 1.5rem;
+    height: 1.625rem;
   }
   
   .form__button {
     font-size: 0.875rem;
-    line-height: 1.4rem;
-      
+    line-height: 1.5rem;
+    height: 1.625rem;  
   }
   
   .header {
