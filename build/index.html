@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FindPic</title>
+<link href="style.css?ded5e1d543d7434efe2b" rel="stylesheet"></head>
+
+<body>
+<!-- header -->
+<header class="header__main">
+    <!-- избранное -->
+    <nav class="header__navigation">
+        <a class="navigation__text" href="#">Избранное</a>
+        <img class="navigation__img" src="../src/img/header/icon.png" alt="favorites">
+    </nav>
+    <!--поиск -->
+    <section class="header__find">
+        <div class="find__logo">
+            <a class="logo__a" href="index.html">
+                <img class="logo__a--img" src="../src/img/header/logo.png" alt="FindPic Logo">
+            </a>
+        </div>
+        <form class="form-box" action="#">
+            <div class="form__div">
+                <input class="form__input" type="text" placeholder="Введите поисковый запрос">
+                <button class="form__button">Поиск</button>
+            </div>
+        </form>
+        <div class="find__search"></div>
+    </section>
+</header>
+<main class="gallery">
+    <div class="gallery-wrapper">
+        <h1 class="gallery-title">Избранное</h1>
+        <div class="gallery-container"></div>
+    </div>
+</main>
+<!-- modal -->
+<div id="modal" class="modal">
+    <!-- modal content -->
+    <div id="modal-content" class="modal-content">
+        <img id="preview-image" class="preview-image" src="../src/img/modal/preview-image.png" alt=""/>
+    </div>
+    <!-- modal control -->
+    <div class="modal-control">
+        <div class="control-buttons">
+            <div class="control-previous-next">
+                <span id="previous" class="previous"><img class="previous" src="../src/img/modal/previous-icon.png" alt=""></span>
+                <span id="next" class="next"><img src="../src/img/modal/next-icon.png" alt=""/></span>
+            </div>
+            <span id="favorite" class="favorite"><img src="../src/img/modal/star-icon.png" alt=""/></span>
+            <span id="close" class="close"><img src="../src/img/modal/close-icon.png" alt=""/></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="bundle.js?ded5e1d543d7434efe2b"></script></body>
+
+</html>
