@@ -60,7 +60,7 @@ $line-grad: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
         &:hover .item-wrapper{
             opacity: 0;
         }
-        &:hover .item-closebutton{
+        &:hover .item-deletebutton{
             opacity: 1;
         }
         @media screen and (min-width: 1200px){
@@ -99,7 +99,7 @@ $line-grad: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
         height: 7.625rem;
         background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5));
     }
-    &-closebutton{
+    &-deletebutton{
         position: relative;
         left: 11.1rem;
         top: 0.35rem;
