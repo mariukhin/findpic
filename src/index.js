@@ -5,19 +5,17 @@ var axios = require('axios');
 const form = document.querySelector(".form-box");
 const btnFavorites = document.querySelector(".navigation__text");
 const favTitle = document.querySelector(".gallery-title");
-
 const input = document.querySelector(".form__input");
 const container = document.querySelector(".gallery-container");
 const wrapper = document.querySelector(".gallery-wrapper");
-
+const request = input.value;
 let addedPics = [];
 let localPics = [];
 
 const API_KEY = "563492ad6f91700001000001cb307b13186e4085ba4554cc62e1e913";
 form.addEventListener("submit", onSearch);
 btnFavorites.addEventListener("click", onFavourites);
-
-
+//input.addEventListener("click", toTop);
 window.onload = function() {
     localPics = checkLocalStorage();
 }
@@ -37,7 +35,17 @@ function onSearch(evt) {
     const request = input.value;
     const count = 12;
     getPics(request, count, "load");
+}*/
+
+/*function toTop (evt) {
+    evt.preventDefault();
+    let nav = document.querySelector(".header__navigation");
+if(request.length !== 0 ) {
+
+  return  nav.style.marginBottom = "0rem";
 }
+}
+*/
 
 function onFavourites(evt) {
     evt.preventDefault();
@@ -139,10 +147,20 @@ function onDeleteFromFavourites(evt) {
 }
 
 //Тут реализовать валидацию
-function checkRequest(request) {
-
+/*function checkRequest(request) {
+    let patt = /^[a-zа-яё]+$/i;
+    let check = patt.test(request);
+     if (!check) {
+    
+        return false;
+     } 
+        /* if (check) {
+         return true;
+         } else {
+             return false;
+         }
 }
-
+*/
 //проверка наличия этого фото в избранном
 function checkPresence(pic) {
     if (checkArr(pic)) {
