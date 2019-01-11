@@ -9,16 +9,18 @@ const input = document.querySelector(".form__input");
 const container = document.querySelector(".gallery-container");
 const wrapper = document.querySelector(".gallery-wrapper");
 const request = input.value;
+
 let addedPics = [];
 let localPics = [];
 
 const API_KEY = "563492ad6f91700001000001cb307b13186e4085ba4554cc62e1e913";
 form.addEventListener("submit", onSearch);
 btnFavorites.addEventListener("click", onFavourites);
-//input.addEventListener("click", toTop);
+input.addEventListener("click", toTop);
+
 window.onload = function() {
     if(localStorage.length >= 1){
-        localPics = getLocalStorage('localPics')
+        localPics = getLocalStorage('localPics');
     }
 }
 
@@ -26,28 +28,17 @@ function onSearch(evt) {
     evt.preventDefault();
     addedPics = [];
     favTitle.style.display = 'none';
-    // if(checkRequest(request))
-    // {
-    //     getPics(request);
-    // }
-    // else
-    // {
-    //     //сообщение что не валидный запрос
-    // }
     const request = input.value;
     const count = 12;
     getPics(request, count, "load");
 }
 
-/*function toTop (evt) {
+function toTop (evt) {
     evt.preventDefault();
-    let nav = document.querySelector(".header__navigation");
-if(request.length !== 0 ) {
+    const nav = document.querySelector(".header__navigation");
+    nav.style.marginBottom = "0rem";
+}
 
-  return  nav.style.marginBottom = "0rem";
-}
-}
-*/
 
 function onFavourites(evt) {
     evt.preventDefault();
@@ -145,21 +136,16 @@ function onDeleteFromFavourites(evt) {
     setLocalStorage('localPics', localPics);
 }
 
-//Тут реализовать валидацию
-/*function checkRequest(request) {
-    let patt = /^[a-zа-яё]+$/i;
-    let check = patt.test(request);
-     if (!check) {
-    
-        return false;
-     } 
-        /* if (check) {
-         return true;
-         } else {
-             return false;
-         }
-}
-*/
+// //Тут реализовать валидацию
+// function checkRequest(request) {
+//     const patt = /[A-Za-z]/;
+//     const check = patt.test(request);
+//     console.log(check);
+//      if (check) {
+//         return true;
+//      } 
+// }
+
 //проверка наличия этого фото в избранном
 function checkPresence(pic) {
     if (checkArr(pic)) {
