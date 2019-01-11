@@ -7,7 +7,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  margin-top: 120px; /* Location of the box */
+  margin-top: 230px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -27,26 +27,23 @@
 
 /* The Preview Image */
 .preview-image {
-  display: flex;
-  position: center;
-  //width: 704px;
-  //height: 408px;
+  max-height: 25rem;
 }
 
 /* Modal control */
 .modal-control {
   margin: 15px auto 0;
   width: 114px;
-  height: 34px;
   background-color: #673ab7;
   border-radius: 15px;
-  line-height: 34px;
 }
 
 /* Modal buttons */
 .control-buttons {
   display: flex;
   justify-content: space-evenly;
+  height: 34px;
+  align-items: center;
 }
 
 /* Control previous-next Buttons */

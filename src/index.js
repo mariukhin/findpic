@@ -39,7 +39,6 @@ function toTop (evt) {
     nav.style.marginBottom = "0rem";
 }
 
-
 function onFavourites(evt) {
     evt.preventDefault();
     resetContainer();
@@ -74,7 +73,7 @@ function onPicClick(evt) {
 }
 
 //в модалке при нажатии на <
-function previousImage(evt) {
+function onPreviousImage(evt) {
     evt.preventDefault();
     let target = document.getElementById('preview-image');
     let targetSrc = document.getElementById('preview-image').src;
@@ -90,7 +89,7 @@ function previousImage(evt) {
 }
 
 //в модалке при нажатии на >
-function nextImage(evt) {
+function onNextImage(evt) {
     evt.preventDefault();
     let target = document.getElementById('preview-image');
     let targetSrc = document.getElementById('preview-image').src;
@@ -171,7 +170,7 @@ function getPics(pic, count, flag) {
                 const pic = {
                     id: id,
                     small: item.src.small,
-                    large: item.src.medium,
+                    large: item.src.large,
                 };
                 addedPics.push(pic);
             });
@@ -251,10 +250,26 @@ function addDeletePicEvent() {
 }
 // добавление event модалке
 (function addModalEvent() {
+    document.onkeydown = function(event) {
+        switch (event.keyCode) {
+            case 27:
+                onCloseModal(event);
+                break;
+            case 32:
+                onLoadMore(event);
+                break;
+            case 37:
+                onPreviousImage(event);
+                break;
+            case 39:
+                onNextImage(event);
+                break;
+        }
+    };
     const previous = document.getElementById('previous');
-    previous.addEventListener("click", previousImage);
+    previous.addEventListener("click", onPreviousImage);
     const next = document.getElementById('next');
-    next.addEventListener("click", nextImage);
+    next.addEventListener("click", onNextImage);
     const favorite = document.getElementById('favorite');
     favorite.addEventListener("click", onAddToFavourites);
     const close = document.getElementById('close');
