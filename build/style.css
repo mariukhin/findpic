@@ -179,16 +179,10 @@ img {
     -ms-border-radius: 0.7rem;
     -o-border-radius: 0.7rem;
     outline: none; }
-  @media screen and (max-width: 1200px) {
-    .gallery {
-      height: 40rem; } }
-  @media screen and (max-width: 717px) {
-    .gallery {
-      height: 58rem; } }
 
 @media screen and (min-width: 1200px) {
   .gallery-wrapper {
-    width: 55rem; } }
+    width: 52rem; } }
 
 @media screen and (max-width: 1199px) {
   .gallery-wrapper {
@@ -217,7 +211,7 @@ img {
   align-content: flex-start; }
   .gallery-container_item {
     margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     width: 12.125rem;
     height: 7.625rem; }
     .gallery-container_item:hover .item-wrapper {
@@ -233,22 +227,12 @@ img {
     @media screen and (max-width: 768px) {
       .gallery-container_item:nth-child(2n+1) {
         margin-left: 0rem; } }
-    @media screen and (max-width: 716px) {
-      .gallery-container_item {
-        margin-left: 0rem; } }
-  @media screen and (max-width: 1200px) {
-    .gallery-container {
-      height: 35rem; } }
-  @media screen and (max-width: 714px) {
-    .gallery-container {
-      width: 70%;
-      height: 55rem; } }
 
 .item-wrapper {
   position: absolute;
   opacity: 1;
   width: 12.125rem;
-  height: 7.625rem;
+  height: 7.63rem;
   background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5)); }
 
 .item-deletebutton {
@@ -265,6 +249,14 @@ img {
 
 .item-pic {
   position: relative;
+  display: block;
+  z-index: -1;
+  bottom: 1.1rem;
+  left: 0rem;
+  width: 12.125rem;
+  height: 7.625rem; }
+
+.item-img {
   display: block;
   z-index: -1;
   bottom: 1.1rem;

@@ -19,7 +19,9 @@ btnFavorites.addEventListener("click", onFavourites);
 
 
 window.onload = function() {
-    localPics = checkLocalStorage();
+    if(localStorage.length >= 1){
+        localPics = getLocalStorage('localPics')
+    }
 }
 
 function onSearch(evt) {
@@ -43,7 +45,6 @@ function onFavourites(evt) {
     evt.preventDefault();
     resetContainer();
     favTitle.style.display = 'block';
-    localPics = getLocalStorage('localPics');
     updateGrid(localPics, "favourite");
     addDeletePicEvent();
 }
@@ -63,8 +64,7 @@ function onLoadMore(evt) {
 function onPicClick(evt) {
     evt.preventDefault();
     const target = evt.target;
-    const targetChild = target.childNodes[1];
-    const targetSrc = targetChild.currentSrc;
+    const targetSrc = target.currentSrc;
     const findImg = (element) => element.small === targetSrc;
 
     let imgPreview = addedPics.find(findImg);
@@ -132,7 +132,6 @@ function onDeleteFromFavourites(evt) {
 
     const findImg = (element) => element.small === targetSrc;
     let delPic = localPics.find(findImg);
-    localPics = checkLocalStorage();
     localPics = deletePic(delPic);
     container.removeChild(targetParent);    
     setLocalStorage('localPics', localPics);
@@ -205,7 +204,7 @@ function createItems(pics) {
     return pics.reduce((acc, item) =>
         acc +
         `<div class="gallery-container_item">
-          <img class="item-pic" src=${item.small} alt="pic">
+          <img class="item-img" src=${item.small} alt="pic">
         </div>`
         , '');
 }
@@ -234,8 +233,8 @@ function addLoadMoreBtn() {
     wrapper.appendChild(btn);
 }
 function deleteLoadMoreBtn() {
-    const btnLMore = document.querySelector(".gallery-loadmore-button");
-    wrapper.removeChild(btnLMore);
+    const btnLMore = Array.from(document.querySelectorAll(".gallery-loadmore-button"));
+    btnLMore.forEach(item => wrapper.removeChild(item));
 }
 
 function addPicEvent() {
