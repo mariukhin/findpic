@@ -241,7 +241,7 @@ img {
   position: absolute;
   opacity: 1;
   width: 12.125rem;
-  height: 7.63rem;
+  height: 7.65rem;
   background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(51, 51, 51, 0.5)); }
 
 .item-deletebutton {
@@ -311,7 +311,7 @@ img {
 
 /* Modal Content */
 .modal-content {
-  padding-top: 58px;
+  padding-top: 38px;
   width: 100%;
   display: flex;
   justify-content: center; }

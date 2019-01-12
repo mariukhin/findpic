@@ -8,6 +8,7 @@ const favTitle = document.querySelector(".gallery-title");
 const input = document.querySelector(".form__input");
 const container = document.querySelector(".gallery-container");
 const wrapper = document.querySelector(".gallery-wrapper");
+const header = document.querySelector(".header__main");
 const request = input.value;
 
 let addedPics = [];
@@ -26,8 +27,9 @@ window.onload = function() {
 
 function onSearch(evt) {
     evt.preventDefault();
-    addedPics = [];
+    resetContainer();
     favTitle.style.display = 'none';
+    header.style.position = 'sticky';
     const request = input.value;
     const count = 12;
     getPics(request, count, "load");
@@ -52,7 +54,6 @@ function onLoadMore(evt) {
     deleteLoadMoreBtn();
     const request = input.value;
     const count = addedPics.length + 12;
-    console.log(count);
     if (count <= 80) {
         getPics(request, count, "load");
     }
@@ -134,16 +135,6 @@ function onDeleteFromFavourites(evt) {
     container.removeChild(targetParent);    
     setLocalStorage('localPics', localPics);
 }
-
-// //Тут реализовать валидацию
-// function checkRequest(request) {
-//     const patt = /[A-Za-z]/;
-//     const check = patt.test(request);
-//     console.log(check);
-//      if (check) {
-//         return true;
-//      } 
-// }
 
 //проверка наличия этого фото в избранном
 function checkPresence(pic) {
