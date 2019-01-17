@@ -2,13 +2,13 @@ import './scss/styles.scss';
 
 var axios = require('axios');
 
-const form = document.querySelector(".form-box");
+const form = document.querySelector(".form");
 const btnFavorites = document.querySelector(".navigation__text");
 const favTitle = document.querySelector(".gallery-title");
 const input = document.querySelector(".form__input");
 const container = document.querySelector(".gallery-container");
 const wrapper = document.querySelector(".gallery-wrapper");
-const request = input.value;
+//const request = input.value;
 let addedPics = [];
 let localPics = [];
 
@@ -35,7 +35,7 @@ function onSearch(evt) {
     const request = input.value;
     const count = 12;
     getPics(request, count, "load");
-}*/
+}
 
 /*function toTop (evt) {
     evt.preventDefault();
