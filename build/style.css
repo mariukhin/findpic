@@ -294,8 +294,6 @@ img {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  margin-top: 230px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
@@ -311,15 +309,12 @@ img {
 
 /* Modal Content */
 .modal-content {
-  padding-top: 38px;
+  padding-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center; }
 
 /* The Preview Image */
-.preview-image {
-  max-height: 25rem; }
-
 /* Modal control */
 .modal-control {
   margin: 15px auto 0;

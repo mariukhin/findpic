@@ -19,8 +19,8 @@ form.addEventListener("submit", onSearch);
 btnFavorites.addEventListener("click", onFavourites);
 input.addEventListener("click", toTop);
 
-window.onload = function() {
-    if(localStorage.length >= 1){
+window.onload = function () {
+    if (localStorage.length >= 1) {
         localPics = getLocalStorage('localPics');
     }
 }
@@ -35,7 +35,7 @@ function onSearch(evt) {
     getPics(request, count, "load");
 }
 
-function toTop (evt) {
+function toTop(evt) {
     evt.preventDefault();
     const nav = document.querySelector(".header__navigation");
     nav.style.marginBottom = "0rem";
@@ -43,10 +43,21 @@ function toTop (evt) {
 
 function onFavourites(evt) {
     evt.preventDefault();
+    onChangeFavourites();
     resetContainer();
     favTitle.style.display = 'block';
     updateGrid(localPics, "favourite");
     addDeletePicEvent();
+}
+
+function onChangeFavourites() {
+    let star = document.getElementById('star');
+    let src = star.src;
+    if (src.contains('false')) {
+        star.src = '../src/img/modal/star-true.png';
+    } else {
+        star.src = '../src/img/modal/star-false.png';
+    }
 }
 
 function onLoadMore(evt) {
@@ -110,7 +121,7 @@ function onAddToFavourites(evt) {
     evt.preventDefault();
     const targetSrc = document.getElementById('preview-image').src;
     localPics = checkLocalStorage();
-    const picToAdd = addedPics.find(item => item.large == targetSrc);
+    const picToAdd = addedPics.find(item => item.large === targetSrc);
     checkPresence(picToAdd);
 }
 
@@ -132,7 +143,7 @@ function onDeleteFromFavourites(evt) {
     const findImg = (element) => element.small === targetSrc;
     let delPic = localPics.find(findImg);
     localPics = deletePic(delPic);
-    container.removeChild(targetParent);    
+    container.removeChild(targetParent);
     setLocalStorage('localPics', localPics);
 }
 
@@ -145,9 +156,11 @@ function checkPresence(pic) {
         setLocalStorage('localPics', localPics);
     }
 }
+
 function checkArr(src) {
-    return localPics.find(item => item.large == src.large);
+    return localPics.find(item => item.large === src.large);
 }
+
 function getPics(pic, count, flag) {
     addedPics = [];
     return axios
@@ -172,10 +185,12 @@ function getPics(pic, count, flag) {
         })
         .catch(error => alert(`Повторите попытку! ${error}`));
 }
+
 function resetContainer() {
     addedPics = [];
     deleteLoadMoreBtn();
 }
+
 function updateGrid(items, flag) {
     if (flag === "load") {
         if (items.length > 0) {
@@ -213,12 +228,15 @@ function createFavouriteItems(pics) {
         </div>`
         , '');
 }
+
 function deletePic(target) {
     return localPics = (localPics.length > 0) ? localPics.filter(item => item != target) : [];
 }
+
 function checkLocalStorage() {
-    return localPics = (localPics.length >= 1) ? localPics = getLocalStorage('localPics') : [];
+    return localPics = (localPics.length >= 0) ? localPics = getLocalStorage('localPics') : [];
 }
+
 function addLoadMoreBtn() {
     const btn = document.createElement('button');
     btn.classList.add('gallery-loadmore-button');
@@ -226,6 +244,7 @@ function addLoadMoreBtn() {
     btn.addEventListener("click", onLoadMore);
     wrapper.appendChild(btn);
 }
+
 function deleteLoadMoreBtn() {
     const btnLMore = Array.from(document.querySelectorAll(".gallery-loadmore-button"));
     btnLMore.forEach(item => wrapper.removeChild(item));
@@ -235,13 +254,15 @@ function addPicEvent() {
     const pics = Array.from(document.querySelectorAll(".gallery-container_item"));
     return pics.forEach(item => item.addEventListener("click", onPicClick));
 }
+
 function addDeletePicEvent() {
     const btns = Array.from(document.querySelectorAll(".item-deletebutton"));
     return btns.forEach(item => item.addEventListener("click", onDeleteFromFavourites));
 }
+
 // добавление event модалке
 (function addModalEvent() {
-    document.onkeydown = function(event) {
+    document.onkeydown = function (event) {
         switch (event.keyCode) {
             case 27:
                 onCloseModal(event);
@@ -265,6 +286,8 @@ function addDeletePicEvent() {
     favorite.addEventListener("click", onAddToFavourites);
     const close = document.getElementById('close');
     close.addEventListener("click", onCloseModal);
+    const outside = document.getElementById('modal-content');
+    outside.addEventListener("click", onCloseModal);
 }());
 
 function setLocalStorage(key, value) {
