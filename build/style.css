@@ -16,11 +16,6 @@
   font-weight: 700;
   src: url(fonts/Comfortaa.ttf); }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 img {
   display: block;
   max-width: 100%;
@@ -29,11 +24,7 @@ img {
 
 @media (min-width: 480px) {
   .header__main {
-    max-width: 95%;
-    margin: auto;
-    padding-bottom: 1rem;
-    padding-right: 0.375rem;
-    padding-left: 0.375rem; }
+    width: 100%; }
   .header__navigation {
     display: flex;
     flex-direction: row-reverse;
@@ -49,17 +40,22 @@ img {
   .navigation__img {
     margin-right: 0.2rem; }
   .header__find {
-    max-width: 100%;
-    margin: auto; }
-  .find__logo {
-    max-width: 55.31%;
-    margin: 0rem auto 1.625rem; }
-  .form__div {
+    max-width: 100%; }
+  .logo__a {
+    border: none;
+    padding: 0;
+    border-radius: 1.875rem;
+    display: block;
+    margin: 0 auto 3.125rem; }
+  .logo__a--img {
+    width: 100%; }
+  .form {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 1.875rem; }
   .form__input {
-    width: 81.2%;
+    width: 78%;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.7rem;
     -webkit-border-radius: 0.7rem;
@@ -81,13 +77,8 @@ img {
     font-family: 'Roboto', sans-serif;
     color: #adafb2;
     font-size: 0.625rem; }
-  .form__div {
-    display: flex;
-    justify-content: space-between; }
   .form__button {
     width: 14.5%;
-    display: block;
-    margin: 0 auto;
     text-align: center;
     height: 1.625rem;
     font-family: 'Comfortaa', sans-serif;
@@ -109,20 +100,11 @@ img {
   .header__find {
     max-width: 65%;
     margin: 0rem 8rem; }
-  .header__main {
-    padding-bottom: 1.25rem;
-    padding-right: 1.5rem; }
-  .logo__a--img {
-    width: 80%; }
   .navigation__text {
     font-size: 0.8rem; }
-  .form__div {
+  .form {
     width: 25rem;
-    margin: auto; }
-  .form__input {
-    height: 1.5rem; }
-  .form__button {
-    height: 1.5rem; } }
+    margin: auto; } }
 
 @media (min-width: 480px) and (min-width: 1200px) {
   .navigation__text {
@@ -132,8 +114,6 @@ img {
     margin-right: 0.2rem; }
   .logo__a--img {
     max-width: 18.75rem; }
-  .find__logo {
-    margin-bottom: 3rem; }
   .form__input::-webkit-input-placeholder {
     font-size: 0.625rem;
     line-height: 1.5rem; }
@@ -143,44 +123,51 @@ img {
   .form__input::placeholder {
     font-size: 0.625rem;
     line-height: 1.5rem; }
-  .form__div {
+  .form {
     width: 35rem;
     margin: auto; }
   .form__input {
-    height: 1.625rem; }
+    height: 1.25rem; }
   .form__button {
     font-size: 0.875rem;
     line-height: 1.5rem;
     height: 1.625rem; }
   .header__main {
-    padding: 1rem 1.75rem; }
+    width: 100%; }
   .header__navigation {
     margin-bottom: 7.187rem; }
   .header__find {
     margin: 0rem auto 1.875rem;
     max-width: 100%; } }
+.gallery-loadmore-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 9.1875rem;
+  height: 1.625rem;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  text-transform: none;
+  color: #ffffff;
+  background-color: #cddc39;
+  border: none;
+  border-radius: 0.7rem;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+  outline: none; }
 
-.gallery {
-  padding-bottom: 1.25rem; }
-  .gallery-loadmore-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 9.1875rem;
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: "";
-    text-transform: none;
-    color: #ffffff;
-    background-color: #cddc39;
-    border: none;
-    border-radius: 0.7rem;
-    -webkit-border-radius: 0.7rem;
-    -moz-border-radius: 0.7rem;
-    -ms-border-radius: 0.7rem;
-    -o-border-radius: 0.7rem;
-    outline: none; }
+@media screen and (max-width: 1200px) {
+  .gallery {
+    height: 40rem; } }
+
+@media screen and (max-width: 717px) {
+  .gallery {
+    height: 58rem; } }
+
 
 @media screen and (min-width: 1200px) {
   .gallery-wrapper {
