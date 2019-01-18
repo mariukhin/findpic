@@ -29,7 +29,9 @@ img {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 2.065rem;
-    align-items: center; }
+    align-items: center;
+    padding-top: 1.875rem;
+    padding-right: 1.875rem; }
   .navigation__text {
     font-size: 0.5rem;
     font-weight: 400;
@@ -46,7 +48,11 @@ img {
     padding: 0;
     border-radius: 1.875rem;
     display: block;
-    margin: 0 auto 3.125rem; }
+    margin: 0 auto 3.125rem;
+    cursor: pointer;
+    width: 12.5rem;
+    height: 3.35rem;
+    outline: none; }
   .logo__a--img {
     width: 100%; }
   .form {
@@ -94,7 +100,8 @@ img {
     -moz-border-radius: 0.7rem;
     -ms-border-radius: 0.7rem;
     -o-border-radius: 0.7rem;
-    outline: none; } }
+    outline: none;
+    cursor: pointer; } }
 
 @media (min-width: 480px) and (min-width: 768px) {
   .header__find {
@@ -102,6 +109,9 @@ img {
     margin: 0rem 8rem; }
   .navigation__text {
     font-size: 0.8rem; }
+  .logo__a {
+    width: 15.625rem;
+    height: 3.95rem; }
   .form {
     width: 25rem;
     margin: auto; } }
@@ -112,8 +122,9 @@ img {
     font-size: 1rem; }
   .navigation__img {
     margin-right: 0.2rem; }
-  .logo__a--img {
-    max-width: 18.75rem; }
+  .logo__a {
+    width: 18.75rem;
+    height: 5rem; }
   .form__input::-webkit-input-placeholder {
     font-size: 0.625rem;
     line-height: 1.5rem; }
@@ -139,16 +150,16 @@ img {
   .header__find {
     margin: 0rem auto 1.875rem;
     max-width: 100%; } }
+
 .gallery-loadmore-button {
   display: block;
   margin: 0 auto;
   text-align: center;
   width: 9.1875rem;
-  height: 1.625rem;
   font-family: 'Comfortaa', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: "";
   text-transform: none;
   color: #ffffff;
   background-color: #cddc39;
@@ -159,15 +170,6 @@ img {
   -ms-border-radius: 0.7rem;
   -o-border-radius: 0.7rem;
   outline: none; }
-
-@media screen and (max-width: 1200px) {
-  .gallery {
-    height: 40rem; } }
-
-@media screen and (max-width: 717px) {
-  .gallery {
-    height: 58rem; } }
-
 
 @media screen and (min-width: 1200px) {
   .gallery-wrapper {
