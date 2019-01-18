@@ -15,7 +15,7 @@ let localPics = [];
 const API_KEY = "563492ad6f91700001000001cb307b13186e4085ba4554cc62e1e913";
 form.addEventListener("submit", onSearch);
 btnFavorites.addEventListener("click", onFavourites);
-input.addEventListener("click", toTop);
+
 
 window.onload = function () {
     if (localStorage.length >= 1) {
@@ -31,12 +31,6 @@ function onSearch(evt) {
     const request = input.value;
     const count = 12;
     getPics(request, count, "load");
-}
-
-function toTop(evt) {
-    evt.preventDefault();
-    const nav = document.querySelector(".header__navigation");
-    nav.style.marginBottom = "0rem";
 }
 
 function onFavourites(evt) {

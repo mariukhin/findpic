@@ -139,16 +139,16 @@ img {
   .header__find {
     margin: 0rem auto 1.875rem;
     max-width: 100%; } }
+
 .gallery-loadmore-button {
   display: block;
   margin: 0 auto;
   text-align: center;
   width: 9.1875rem;
-  height: 1.625rem;
   font-family: 'Comfortaa', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: "";
   text-transform: none;
   color: #ffffff;
   background-color: #cddc39;
@@ -159,15 +159,6 @@ img {
   -ms-border-radius: 0.7rem;
   -o-border-radius: 0.7rem;
   outline: none; }
-
-@media screen and (max-width: 1200px) {
-  .gallery {
-    height: 40rem; } }
-
-@media screen and (max-width: 717px) {
-  .gallery {
-    height: 58rem; } }
-
 
 @media screen and (min-width: 1200px) {
   .gallery-wrapper {
