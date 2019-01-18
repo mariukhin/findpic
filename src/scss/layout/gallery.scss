@@ -5,9 +5,8 @@
         margin: 0 auto;
         text-align: center;
         width: 9.1875rem;
-        height: 1.625rem;
         font-family: 'Comfortaa', sans-serif;        
-        @include font_style(1rem, 400, 1rem, none, button-text);
+        @include font_style($fsize: 1rem,  $fweight: 400, $ftrans: none, $fcolor: button-text);
         background-color: #cddc39;
         border: none;
         border-radius: 0.7rem;     
@@ -24,10 +23,10 @@
         width: 52rem;
     }
     @media screen and (max-width: 1199px) {
-        width: 45rem;
+        width: 38rem;
     }
     @media screen and (max-width: 768px){
-        width: 35rem;
+        width: 25rem;
     }
 }
 .gallery-title{
@@ -42,32 +41,16 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    justify-content: space-between;
     &_item{
+        flex-basis: 12.125rem;
         margin-bottom: 1rem;
-        margin-left: 1rem;
-        width: 12.125rem;
         height: 7.625rem;
         &:hover .item-wrapper{
             opacity: 0;
         }
         &:hover .item-deletebutton{
             opacity: 1;
-        }
-        @media screen and (min-width: 1200px){
-            &:nth-child(4n+1){
-                margin-left: 0rem;
-            }
-        }
-        @media screen and (max-width: 1199px){
-            &:nth-child(3n+1){
-                margin-left: 0rem;
-            }
-        }
-        @media screen and (max-width: 768px){
-            &:nth-child(2n+1){
-                margin-left: 0rem;
-            }
         }
     }
 }

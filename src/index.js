@@ -43,22 +43,22 @@ function toTop(evt) {
 
 function onFavourites(evt) {
     evt.preventDefault();
-    onChangeFavourites();
+    // onChangeFavourites();
     resetContainer();
     favTitle.style.display = 'block';
     updateGrid(localPics, "favourite");
     addDeletePicEvent();
 }
 
-function onChangeFavourites() {
-    let star = document.getElementById('star');
-    let src = star.src;
-    if (src.contains('false')) {
-        star.src = '../src/img/modal/star-true.png';
-    } else {
-        star.src = '../src/img/modal/star-false.png';
-    }
-}
+// function onChangeFavourites() {
+//     let star = document.getElementById('star');
+//     let src = star.src;
+//     if (src.contains('false')) {
+//         star.src = '../src/img/modal/star-true.png';
+//     } else {
+//         star.src = '../src/img/modal/star-false.png';
+//     }
+// }
 
 function onLoadMore(evt) {
     evt.preventDefault();
