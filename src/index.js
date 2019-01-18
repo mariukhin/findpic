@@ -120,7 +120,6 @@ function onNextImage(evt) {
 function onAddToFavourites(evt) {
     evt.preventDefault();
     const targetSrc = document.getElementById('preview-image').src;
-    localPics = checkLocalStorage();
     const picToAdd = addedPics.find(item => item.large === targetSrc);
     checkPresence(picToAdd);
 }
@@ -231,10 +230,6 @@ function createFavouriteItems(pics) {
 
 function deletePic(target) {
     return localPics = (localPics.length > 0) ? localPics.filter(item => item != target) : [];
-}
-
-function checkLocalStorage() {
-    return localPics = (localPics.length >= 0) ? localPics = getLocalStorage('localPics') : [];
 }
 
 function addLoadMoreBtn() {
